@@ -1,0 +1,12 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# packaged builds (regenerate with zip)
+*.zip
+
+# node (if tooling is added later)
+node_modules/
+
+# internal store-listing working files (kept local only)
+store-assets/

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LinkedIn Visibility Toggle</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="icons/icon48.png" alt="" width="32" height="32">
+        <div>
+          <h1>Profile visibility</h1>
+          <p id="status">Choose what LinkedIn shows when you view profiles.</p>
+        </div>
+        <div class="settings-wrap">
+          <button id="gear" type="button" aria-label="Settings" aria-expanded="false" title="Settings">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <path fill="currentColor" d="M19.14 12.94a7.6 7.6 0 0 0 .05-.94 7.6 7.6 0 0 0-.05-.94l2.03-1.58a.5.5 0 0 0 .12-.62l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7 7 0 0 0-1.62-.94l-.36-2.54a.5.5 0 0 0-.5-.42h-3.84a.5.5 0 0 0-.5.42l-.36 2.54a7 7 0 0 0-1.62.94l-2.39-.96a.5.5 0 0 0-.6.22L2.31 8.86a.5.5 0 0 0 .12.62l2.03 1.58a7.6 7.6 0 0 0 0 1.88l-2.03 1.58a.5.5 0 0 0-.12.62l1.92 3.32a.5.5 0 0 0 .6.22l2.39-.96a7 7 0 0 0 1.62.94l.36 2.54a.5.5 0 0 0 .5.42h3.84a.5.5 0 0 0 .5-.42l.36-2.54a7 7 0 0 0 1.62-.94l2.39.96a.5.5 0 0 0 .6-.22l1.92-3.32a.5.5 0 0 0-.12-.62l-2.03-1.58ZM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7Z"/>
+            </svg>
+          </button>
+          <div id="settings" class="panel" hidden role="group" aria-label="How to apply changes">
+            <p class="panel-title">When you choose a mode</p>
+            <label class="opt">
+              <input type="radio" name="apply-mode" value="background">
+              <span>
+                <strong>Apply in the background</strong>
+                <small>Change your setting without leaving this page.</small>
+              </span>
+            </label>
+            <label class="opt">
+              <input type="radio" name="apply-mode" value="page">
+              <span>
+                <strong>Open LinkedIn's settings page</strong>
+                <small>Go to the page and select it there.</small>
+              </span>
+            </label>
+          </div>
+        </div>
+      </header>
+
+      <section aria-label="Visibility choices">
+        <button data-mode="name" type="button">
+          <span class="dot"></span>
+          <span>Your name and headline</span>
+        </button>
+        <button data-mode="characteristics" type="button">
+          <span class="dot"></span>
+          <span>Private profile characteristics</span>
+        </button>
+        <button data-mode="private" type="button">
+          <span class="dot"></span>
+          <span>Private mode</span>
+        </button>
+      </section>
+
+      <button id="open-only" class="secondary" type="button">Open settings page</button>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
